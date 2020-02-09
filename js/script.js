@@ -24,7 +24,7 @@ if (randomNumber == 1){
 
 printMessage('Mój ruch to: ' + computerMove);
 
-let playerInput = prompt('Wybierz sój ruch! 1: kamień, 2: papier, 3: nożyce.');
+let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
 console.log('Gracz wpisał: ' + playerInput);
 
@@ -39,3 +39,25 @@ if(playerInput == '1'){
 }
 
 printMessage('Twój ruch to: ' + playerMove);
+
+if( computerMove == 'kamień' && playerMove == 'papier'){
+	printMessage('Wygrywasz! :)');
+} else if( computerMove == 'kamień' && playerMove == 'nożyce'){
+	printMessage('Przegrywasz! :(');
+} else if( computerMove == 'kamień' && playerMove == 'kamień'){
+	printMessage('Padł remis :|');
+} else if( computerMove == 'nożyce' && playerMove == 'kamień'){
+	printMessage('Wygrywasz! :)');
+} else if( computerMove == 'nożyce' && playerMove == 'papier'){
+	printMessage('Pregrywasz! :(');
+} else if( computerMove == 'nożyce' && playerMove == 'nożyce'){
+	printMessage('Padł remis :|');
+} else if( computerMove == 'papier' && playerMove == 'kamień'){
+	printMessage('Przegrywasz! :(');
+} else if( computerMove == 'papier' && playerMove == 'nożyce'){
+	printMessage('Wygrywasz! :)');
+} else if( computerMove == 'papier' && playerMove == 'papier'){
+	printMessage('Padł remis :|');
+} else {
+	printMessage('Oops, wybierz liczbę z zakresu 1-3');
+}
