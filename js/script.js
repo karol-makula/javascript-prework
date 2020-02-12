@@ -2,7 +2,7 @@ function playGame(playerInput) {
 	clearMessages();
 
 	function printMessage(msg) {
-		let div = document.createElement('div');
+		const div = document.createElement('div');
 		div.innerHTML = msg;
 		document.getElementById('messages').appendChild(div);
 	}
@@ -22,8 +22,6 @@ function playGame(playerInput) {
 
 		printMessage('Nie znam ruchu o id ' + randomNumber + '.');
 		return 'nieznany ruch';
-
-		
 	}
 
 	const randomNumber = Math.floor(Math.random() * 3 +1);
@@ -46,7 +44,7 @@ function playGame(playerInput) {
 		} else if (computerMove === playerMove) {
 			return drawMsg;
 		}
-			return lostMsg;
+		return lostMsg;
 	}
 
 	printMessage('Wynik: ' + 'Zagrałem ' + computerMove + ', a Ty ' + playerMove + '. ' + getGameResultMsg(computerMove, playerMove));
